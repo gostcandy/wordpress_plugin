@@ -4,7 +4,7 @@
  * Plugin URI: http://www.ngghost.com:84/
  * Description: Gutenberg block for advanced search with AJAX functionality
  * Version: 1.0.0
- * Author: Your Name
+ * Author: Ghost
  * License: GPL v2 or later
  * Text Domain: advanced-search
  */

@@ -1,0 +1,35 @@
+{
+  "apiVersion": 2,
+  "name": "advanced-search/block",
+  "title": "Advanced Search",
+  "category": "advanced-search",
+  "description": "Display advanced search form with results",
+  "keywords": ["search", "filter", "posts"],
+  "icon": "search",
+  "textdomain": "advanced-search",
+  "editorScript": "advanced-search-block-editor",
+  "editorStyle": "advanced-search-block-editor-style",
+  "style": "advanced-search-block-style",
+  "attributes": {
+    "blockId": {
+      "type": "string",
+      "default": ""
+    },
+    "postsPerPage": {
+      "type": "number",
+      "default": 10
+    },
+    "showCategory": {
+      "type": "boolean",
+      "default": true
+    },
+    "showTags": {
+      "type": "boolean",
+      "default": false
+    },
+    "showPagination": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

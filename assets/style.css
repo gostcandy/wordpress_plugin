@@ -1,0 +1,664 @@
+/* Advanced Search Block Styles */
+.advanced-search-block {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* 搜索表单 */
+.asb-search-form {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.asb-form-group {
+    margin-bottom: 20px;
+}
+
+.asb-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #343a40;
+    font-size: 14px;
+}
+
+.asb-input,
+.asb-select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.asb-input:focus,
+.asb-select:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+.asb-select[multiple] {
+    height: 120px;
+    padding: 5px 15px;
+}
+
+.asb-form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+.asb-button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.asb-button-primary {
+    background-color: #007cba;
+    color: white;
+}
+
+.asb-button-primary:hover {
+    background-color: #005a87;
+}
+
+.asb-button-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.asb-button-secondary:hover {
+    background-color: #545b62;
+}
+
+/* 搜索结果 */
+.asb-results-container {
+    margin-top: 30px;
+}
+
+.asb-results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.asb-results-header h3 {
+    margin: 0;
+    color: #343a40;
+    font-size: 24px;
+}
+
+.asb-results-count {
+    font-size: 14px;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.asb-results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.asb-post-item {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.asb-post-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.asb-post-content {
+    padding: 20px;
+}
+
+.asb-post-title {
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.asb-post-title a {
+    color: #212529;
+    text-decoration: none;
+}
+
+.asb-post-title a:hover {
+    color: #007cba;
+}
+
+.asb-post-thumbnail {
+    margin-bottom: 15px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.asb-post-thumbnail img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.asb-post-item:hover .asb-post-thumbnail img {
+    transform: scale(1.05);
+}
+
+.asb-post-excerpt {
+    color: #6c757d;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.asb-post-meta {
+    font-size: 12px;
+    color: #868e96;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.asb-post-meta span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.asb-post-meta span:not(:last-child):after {
+    content: "•";
+    margin-left: 15px;
+}
+
+/* 分页 */
+.asb-pagination {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.asb-pagination-links {
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.asb-pagination-links a,
+.asb-pagination-links span {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #007cba;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.asb-pagination-links a:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.asb-pagination-links .active {
+    background-color: #007cba;
+    border-color: #007cba;
+    color: white;
+}
+
+.asb-page-dots {
+    border: none !important;
+    padding: 8px 5px !important;
+}
+
+/* 加载指示器 */
+.asb-loading {
+    text-align: center;
+    padding: 40px;
+}
+
+.asb-spinner {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #007cba;
+    border-radius: 50%;
+    animation: asb-spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes asb-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.asb-loading span {
+    display: block;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+/* 消息提示 */
+.asb-no-results,
+.asb-error {
+    text-align: center;
+    padding: 40px;
+    color: #6c757d;
+    font-size: 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px dashed #dee2e6;
+}
+
+.asb-error {
+    color: #dc3545;
+    border-color: #f5c6cb;
+    background: #f8d7da;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .advanced-search-block {
+        padding: 15px;
+    }
+
+    .asb-search-form {
+        padding: 20px;
+    }
+
+    .asb-results-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .asb-results-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .asb-form-actions {
+        flex-direction: column;
+    }
+
+    .asb-button {
+        width: 100%;
+    }
+}
+
+/* 编辑器样式 */
+.advanced-search-block-editor {
+    padding: 20px;
+    background: #f8f9fa;
+    border: 1px dashed #adb5bd;
+    border-radius: 4px;
+}
+
+.asb-editor-preview h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #1e1e1e;
+}
+
+.asb-form-preview {
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+
+.asb-field-preview {
+    margin-bottom: 15px;
+}
+
+.asb-field-preview label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #1e1e1e;
+}
+
+.asb-input-preview,
+.asb-select-preview {
+    padding: 8px 12px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    color: #666;
+    font-size: 13px;
+}
+
+.asb-buttons-preview {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.asb-results-preview {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.asb-results-preview h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* 修复多选框样式 */
+.asb-select[multiple] {
+    min-height: 120px;
+    padding: 8px;
+    background-image: none !important; /* 移除默认箭头 */
+}
+
+.asb-select[multiple] option {
+    padding: 8px 12px;
+    margin: 2px 0;
+    border-radius: 4px;
+}
+
+.asb-select[multiple] option:checked {
+    background-color: #007cba;
+    color: white;
+}
+
+.asb-select[multiple] option:hover {
+    background-color: #f0f0f0;
+}
+
+/* 多选框提示 */
+.asb-tags-hint {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+}
+
+/* 修复表单布局 */
+.asb-form-group {
+    position: relative;
+}
+
+/* 确保隐藏字段不影响布局 */
+.asb-search-form input[type="hidden"] {
+    display: none;
+}
+
+/* 初始消息样式 */
+.asb-initial-message {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #495057;
+}
+
+.asb-initial-message p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* 确保分页始终显示（如果有内容） */
+.asb-pagination {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+.asb-pagination-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 加载文本 */
+.asb-loading-text {
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* 复选框组样式 */
+.asb-tags-checkbox-group {
+    margin-bottom: 20px;
+}
+
+.asb-checkbox-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 15px;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+
+.asb-checkbox-item {
+    display: flex;
+    align-items: center;
+    min-width: 120px;
+    flex: 0 0 calc(33.333% - 10px);
+}
+
+.asb-checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.asb-checkbox-label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #495057;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    background: white;
+    transition: all 0.2s ease;
+}
+
+.asb-checkbox-label:hover {
+    background: #f8f9fa;
+    border-color: #adb5bd;
+}
+
+.asb-checkbox:checked + .asb-checkbox-label {
+    background-color: #e7f3ff;
+    border-color: #007cba;
+    color: #005a87;
+}
+
+.asb-checkbox-label:before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 2px solid #adb5bd;
+    border-radius: 3px;
+    background: white;
+    transition: all 0.2s ease;
+}
+
+.asb-checkbox:checked + .asb-checkbox-label:before {
+    background-color: #007cba;
+    border-color: #007cba;
+}
+
+.asb-checkbox:checked + .asb-checkbox-label:after {
+    content: '✓';
+    position: absolute;
+    left: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.asb-tag-count {
+    margin-left: auto;
+    font-size: 12px;
+    color: #868e96;
+    background: #f1f3f5;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-left: 8px;
+}
+
+.asb-checkbox:checked + .asb-checkbox-label .asb-tag-count {
+    background: #005a87;
+    color: white;
+}
+
+/* 分页样式增强 */
+.asb-pagination {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+    display: block !important; /* 确保始终显示 */
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.asb-pagination-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.asb-page-number,
+.asb-page-prev,
+.asb-page-next {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    background: white;
+    color: #007cba;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.asb-page-number:hover,
+.asb-page-prev:hover,
+.asb-page-next:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.asb-page-number.active {
+    background-color: #007cba;
+    border-color: #007cba;
+    color: white;
+}
+
+.asb-page-dots {
+    padding: 0 8px;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+/* 确保结果容器正确显示 */
+.asb-results-container {
+    position: relative;
+}
+
+.asb-results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+/* 滚动条样式 */
+.asb-checkbox-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.asb-checkbox-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.asb-checkbox-list::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.asb-checkbox-list::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .asb-checkbox-item {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+    .asb-checkbox-list {
+        max-height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .asb-checkbox-item {
+        flex: 0 0 100%;
+    }
+
+    .asb-results-grid {
+        grid-template-columns: 1fr;
+    }
+}

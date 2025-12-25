@@ -1,0 +1,59 @@
+/* 编辑器专用样式 */
+.wp-block-advanced-search-block {
+    padding: 20px;
+    background: #f8f9fa;
+    border: 2px dashed #007cba;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.wp-block-advanced-search-block .asb-editor-preview {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.wp-block-advanced-search-block .asb-editor-preview h3 {
+    color: #007cba;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.asb-field-preview label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #495057;
+}
+
+.asb-input-preview,
+.asb-select-preview {
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, #fff 0%, #f8f9fa 100%);
+    font-style: italic;
+}
+
+.asb-buttons-preview .button {
+    min-width: 100px;
+    text-align: center;
+}
+
+.asb-results-preview {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    text-align: center;
+}
+
+.asb-results-preview h4 {
+    color: #495057;
+    font-size: 18px;
+}
+
+.asb-results-preview p {
+    color: #6c757d;
+    font-size: 14px;
+    margin: 0;
+}

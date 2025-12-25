@@ -1,4 +1,4 @@
-// assets/block.js - 修复版本
+
 (function(blocks, element, components, editor, i18n, data, apiFetch, blockEditor) {
     // 检查所有依赖是否可用
     if (!blocks || !element || !components || !editor || !i18n) {

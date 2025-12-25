@@ -9,15 +9,15 @@
 - ✅ URL参数同步和页面刷新状态保持
 - ✅ AJAX搜索无需页面刷新
 - ✅ 分页支持
-- ✅ 数据库自动备份
 - ✅ REST API支持
 - ✅ 响应式设计
-- ✅ 短码支持
+
 
 ## 安装方法
 
 1. 下载插件文件
 2. 上传到 `/wp-content/plugins/` 目录
+3. 需要保证插件的根目录有写入权限
 3. 在WordPress后台激活插件
 4. 在Gutenberg编辑器中添加"Advanced Search"区块
 
@@ -28,16 +28,9 @@
 - 拖放区块到页面
 - 在区块设置中配置显示选项
 
-### 2. 短码使用
-
-[advanced_search
-posts_per_page="10"
-show_category="true"
-show_tags="false"
-show_pagination="true"]
 
 
-### 3. URL参数
+### 2. URL参数
 支持的URL参数：
 - `q` - 搜索关键词
 - `cat` - 分类ID
@@ -46,12 +39,6 @@ show_pagination="true"]
 
 示例：`https://domain.com/?q=test&cat=2&tags[]=1&tags[]=2&page=1&asb_search=1`
 
-## 数据库备份
-
-插件每天自动备份数据库到：
-`网站根目录/advanced-search-backups/`
-
-备份文件格式：`backup-YYYY-MM-DD-HH-MM-SS.sql`
 
 ## 文件结构
 advanced-search-plugin/
@@ -77,27 +64,3 @@ advanced-search-plugin/
 - MySQL 5.6+
 - JavaScript enabled
 
-## 开发说明
-
-### AJAX端点
-- `admin-ajax.php?action=asb_search` - 搜索文章
-- `admin-ajax.php?action=asb_get_categories` - 获取分类
-- `admin-ajax.php?action=asb_get_tags` - 获取标签
-
-### REST API端点
-- `/wp-json/advanced-search/v1/search` - REST搜索
-
-### 过滤器钩子
-
-```php
-// 修改搜索参数
-add_filter('asb_search_params', function($params) {
-    // 修改参数
-    return $params;
-});
-
-// 修改搜索结果
-add_filter('asb_search_results', function($results) {
-    // 修改结果
-    return $results;
-});

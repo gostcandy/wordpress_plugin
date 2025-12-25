@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Advanced Search Block
- * Plugin URI: https://yourdomain.com
+ * Plugin URI: http://www.ngghost.com:84/
  * Description: Gutenberg block for advanced search with AJAX functionality
  * Version: 1.0.0
  * Author: Your Name
